@@ -136,4 +136,5 @@ if (-not $DryRun) {
   Write-Host ("Installed {0} files and {1} keys into {2}" -f $items.Count, $keyLines.Count, $HerdrHome)
   Write-Host "Switch layouts with Ctrl+Shift+L in Herdr, or: herdr-app do layout.switch --name $Name"
   Write-Host "Optional: to hear this layout's sounds instead of Herdr's, point sounds.done and sounds.blocked in settings.json at its files (README, Install)."
+  Write-Host "Using Claude Code? The matching status line: https://github.com/dawid-walter/rghton-statusline (install it with the theme herdr)."
 }

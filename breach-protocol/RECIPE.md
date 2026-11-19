@@ -1,6 +1,6 @@
 # Breach Protocol
 
-A cyberpunk HUD for Herdr. Near-black panels with cut corners over a dimmed chip city that shows through the terminals; yellow means "you are here", cyan "working", red "needs you" (ICE) and green "done". Agents are netrunners at their desks: jacked in while they work, a red ICE screen when they need you, `[OK]` when they finish, and sitting on a rooftop when idle. A striped ICE alarm lists every agent that waits for you, and a MOTION switch stills everything except the signal bars of working agents.
+A cyberpunk HUD for Herdr: near-black cut-corner panels over a dimmed chip city; yellow means "you are here", cyan "working", red "needs you" (ICE), green "done". Agents are netrunners at their desks, a striped ICE alarm lists who waits for you, and MOTION MIN stills all but the bars of working agents. Using Claude Code? Add the matching rghtON status line (github.com/dawid-walter/rghton-statusline, theme `herdr`).
 
 ![Breach Protocol](preview.png)
 
