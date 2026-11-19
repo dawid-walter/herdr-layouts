@@ -66,6 +66,8 @@ Recommended if you run Claude Code in Herdr: the [rghtON statusline](https://git
 Install it with the theme `herdr` (`.\install.ps1 -Theme herdr` on Windows, `./install.sh --theme herdr` on Linux and macOS) and it follows the layout shown in Herdr, reading the colours from `themes/breach-protocol.json`.
 Its installer changes only the `statusLine` entry in `~/.claude/settings.json` and backs the file up first.
 
+![Claude Code in Breach Protocol with the rghtON status line](claude-code-statusline.png)
+
 ## What it reaches
 
 - No network.
