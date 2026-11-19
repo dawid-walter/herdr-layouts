@@ -68,11 +68,29 @@ Its installer changes only the `statusLine` entry in `~/.claude/settings.json` a
 
 ![Claude Code in Breach Protocol with the rghtON status line](claude-code-statusline.png)
 
+## Session names on agent cards (optional)
+
+Each agent card can show the Claude Code session's name in brackets (`[api-7c]`) under its title. Neither Herdr nor Claude Code puts that name where the layout can see it, so `extras/herdr-session-label.sh`, a small Claude Code hook, does: when a session starts and on each prompt it runs `hc label <terminal> claude=<name>` for the Herdr terminal the session is in. Without it the cards simply leave that line out.
+
+1. Copy `extras/herdr-session-label.sh` to `~/.claude/hooks/`. It needs `jq`.
+2. Add the hook to `~/.claude/settings.json`, next to any hooks you already have:
+
+```json
+"hooks": {
+  "SessionStart":     [{ "hooks": [{ "type": "command", "command": "bash ~/.claude/hooks/herdr-session-label.sh", "timeout": 10 }] }],
+  "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "bash ~/.claude/hooks/herdr-session-label.sh", "timeout": 10 }] }]
+}
+```
+
+On Windows, if `bash` is not found, give Git Bash and the script by full path: `"\"C:/Program Files/Git/bin/bash.exe\" C:/Users/<you>/.claude/hooks/herdr-session-label.sh"`.
+New sessions get their name from then on; review or turn the hook off in Claude Code's `/hooks`. Outside Herdr it does nothing.
+
 ## What it reaches
 
 - No network.
 - `breach-protocol-spaces` runs `git` in your spaces' folders and `hc machine ls`, as Herdr's own spaces list does (branch and ahead/behind, machines).
 - It reads nothing outside the Herdr home and your spaces' folders.
+- The optional `extras/herdr-session-label.sh` hook (only if you add it) reads `~/.claude/sessions/` and runs `hc label` on the terminal its own session is in.
 
 ## Credits
 

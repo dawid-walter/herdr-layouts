@@ -56,6 +56,7 @@ Colours (all from `themes/breach-protocol.json`): background #050508, chrome #0b
 ## Watch out
 
 - **The theme file:** the gallery's install steps copy only `layouts/` and `mods/`. Also copy `themes/breach-protocol.json` into the Herdr home's `themes/`, or the layout shows Herdr's default colours.
+- The `[session name]` line on an agent card reads the terminal label `claude`. Neither Herdr nor Claude Code sets it; the optional hook `extras/herdr-session-label.sh` does (README, Session names). Without the label the line is left out.
 - `line_height(16)` is a multiplier (16 × the font size), not pixels: write `line_height("16px")`.
 - Small drawn polygons (a 7 px rhombus) come out lopsided at fractional zoom, because their half-pixel points antialias unevenly. The done rhombus is an SVG (`art/rhombus.svg`, tinted) instead.
 - `terminal_opacity` applies twice (what shows is 1 − (1 − x)²): 0.45 covers about 70% of the background. 0.7 would hide it.
