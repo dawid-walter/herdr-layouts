@@ -60,6 +60,12 @@ The status bar shows the time as 24-hour `HH:MM`. For a 12-hour clock (`9:05 PM`
 
 Edit the copy in the Herdr home (`~/.config/herdr-app/layouts/`) and it applies at once; edit the package's copy too, or the next install puts 24-hour back.
 
+## Claude Code status line
+
+Recommended if you run Claude Code in Herdr: the [rghtON statusline](https://github.com/dawid-walter/rghton-statusline) has a Breach look, a cyberpunk HUD with a glitching sign in this layout's colours.
+Install it with the theme `herdr` (`.\install.ps1 -Theme herdr` on Windows, `./install.sh --theme herdr` on Linux and macOS) and it follows the layout shown in Herdr, reading the colours from `themes/breach-protocol.json`.
+Its installer changes only the `statusLine` entry in `~/.claude/settings.json` and backs the file up first.
+
 ## What it reaches
 
 - No network.
