@@ -1,0 +1,6 @@
+{
+  "layout:breach-protocol": {
+    "ctrl-shift-.": "breach-protocol-status.motion",
+    "ctrl-shift-k": "mod.open:breach-protocol-picker"
+  }
+}
